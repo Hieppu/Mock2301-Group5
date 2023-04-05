@@ -1,0 +1,176 @@
+.footer {
+
+    background-color: #f5f5f5;
+
+    .footer-top {
+        display: flex;
+        width: 75rem;
+        margin: auto;
+        min-width: 1200px;
+        align-items: flex-start;
+
+        .footer-content {
+            width: 100%;
+            padding: 0.3125rem;
+            box-sizing: border-box;
+            margin-top: 1.5rem;
+
+            .help-customer {
+                font-size: .75rem;
+                font-weight: 700;
+                color: rgba(0, 0, 0, .87);
+                margin-bottom: 1.25rem;
+                margin-top: 0.5rem;
+            }
+
+            .f-listmenu {
+
+                li {
+                    margin-bottom: 10px;
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: #333;
+                        font-size: 0.75rem;
+
+                        &:hover {
+                            color: #2f80ED;
+                        }
+                    }
+                }
+            }
+
+
+            .f-listtel-title {
+                font-size: 14px;
+            }
+
+            .f-listtel-content {
+                line-height: 21px;
+                margin-top: 10px;
+
+                span {
+                    width: 80px;
+                    display: inline-block;
+                    font-size: 0.75rem;
+                }
+
+                a {
+                    color: #2f80ed;
+                    font-weight: bold;
+                    text-decoration: none;
+                    font-size: 0.75rem;
+                }
+            }
+
+
+            .f-social {
+                display: flex;
+                margin-bottom: 20px;
+
+                span {
+                    white-space: nowrap;
+                    font-size: 0.75rem;
+                    align-items: center;
+                    display: flex;
+                }
+
+                .link-fb {
+                    color: #2f80ed;
+                    margin-right: 10px;
+                    text-decoration: none;
+                    display: inline-flex;
+
+                    .icon {
+                        font-size: 18px;
+                    }
+
+                    .facebook {
+                        margin-right: 5px;
+                    }
+                }
+
+                .link-youtube {
+                    margin-right: 10px;
+                    text-decoration: none;
+                    display: inline-flex;
+
+                    .icon {
+                        font-size: 18px;
+                    }
+
+                    .youtube {
+                        color: red;
+                        margin-right: 5px;
+                    }
+
+                    span {
+                        color: #2f80ED;
+                    }
+                }
+
+                .link-zalo {
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+
+                    img {
+                        max-width: 18px;
+                        margin-top: -5px;
+                        vertical-align: middle;
+                        height: 17px;
+                        margin-right: 5px;
+                    }
+
+                    span {
+                        color: #2f80ED;
+                    }
+
+                    .youtube {
+                        color: red;
+
+                    }
+                }
+
+            }
+
+            .f-certify {
+                margin-bottom: 20px;
+
+                .no-followed {
+                    margin-right: 5px;
+                    display: inline-block;
+                    vertical-align: top;
+
+                    img {
+                        height: 30px;
+                        width: 90px;
+                    }
+                }
+            }
+
+            .f-website {
+                .logo-list {
+                    list-style: none;
+                    margin-top: 15px;
+
+                    img {
+                        height: 24px;
+                        width: 80px;
+                        line-height: 30px;
+                        vertical-align: middle;
+                    }
+
+                    li {
+                        float: left;
+                        width: 80px;
+                        margin: 0 10px 10px 6px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
