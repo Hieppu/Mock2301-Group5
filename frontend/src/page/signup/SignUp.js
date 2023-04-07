@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import { Form, Formik, useFormik } from "formik";
+import React from 'react'
+import { Formik } from "formik";
 import { Link } from 'react-router-dom';
 import './SignUp.scss'
 import { validationSchema } from './../ValidationSchema';
-import deepEqual from 'lodash.isequal';
 import {
     Button,
     TextField,
@@ -11,6 +10,7 @@ import {
     Box
 } from "@mui/material";
 import Footer from '../footer/Footer';
+// eslint-disable-next-line no-lone-blocks
 {/* <p>{props.errorMessageRegister}</p> */ }
 
 const Signup = (props) => {

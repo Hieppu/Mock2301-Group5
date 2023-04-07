@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { validationSchema } from './../ValidationSchema';
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -7,43 +7,11 @@ import {
     Button,
     TextField,
     Typography,
-    Box
 } from "@mui/material";
 import Footer from '../footer/Footer';
 import { Link } from 'react-router-dom';
-import Toast from '../../custom/customtoast/Toast';
 // import { Button } from '../../custom/ImportCustom';
-import { FaCheckCircle } from 'react-icons/fa'
 const Signup = (props) => {
-
-    const [list, setList] = useState([]);
-    let toastProperties = null;
-
-    const showToast = type => {
-        switch (type) {
-            case 'success':
-                toastProperties = {
-                    id: list.length + 1,
-                    title: 'Success',
-                    description: 'This is a success toast component',
-                    backgroundColor: '#5cb85c',
-                    icon: FaCheckCircle
-                }
-                break;
-            case 'danger':
-                toastProperties = {
-                    id: list.length + 1,
-                    title: 'Danger',
-                    description: 'This is a danger toast component',
-                    backgroundColor: '#d9534f'
-                }
-                break;
-            default:
-                toastProperties = [];
-        }
-        setList([...list, toastProperties]);
-    };
-
     const schema = validationSchema
     const { control, register, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
@@ -59,9 +27,7 @@ const Signup = (props) => {
     });
     const onSubmit = data => {
         console.log(data)
-        return (
-            <Toast toastlist={list} position="button-right" setList={setList} />
-        )
+
     };
     return (
         <div className='signup-container'>
@@ -236,7 +202,6 @@ const Signup = (props) => {
                             </div>
                         </div>
                     </div>
-                    {/* <Toast toastlist={list} position="button-right" setList={setList} /> */}
                 </div>
             </div>
             <Footer />
