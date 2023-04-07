@@ -1,0 +1,41 @@
+.head {
+    background-color: #0f3460;
+    padding: 10px 0;
+    color: #fff;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 90%;
+        margin: auto;
+
+        .left {
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 10px;
+                font-size: 24px;
+                color: #fff;
+            }
+
+            label {
+                margin-right: 30px;
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+
+        .right {
+            width: 50%;
+            text-align-last: right;
+
+            label {
+                margin-right: 30px;
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+    }
+}

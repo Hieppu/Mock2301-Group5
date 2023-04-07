@@ -9,26 +9,15 @@ import {
     Typography,
     Box
 } from "@mui/material";
-import Footer from '../footer/Footer';
+import Footer from '../../component/Footer/Footer';
+import Header from '../../component/Header/Header';
 // eslint-disable-next-line no-lone-blocks
 {/* <p>{props.errorMessageRegister}</p> */ }
 
 const Signup = (props) => {
     return (
         <div className='signup-container'>
-            <div className="signup-header">
-                <div className='form-text'>
-                    <div className='link-content'>
-                        <Link className='logo-mobile'>
-                            <img src="../../../image/logomobile.png" alt="" />
-                        </Link>
-                        <div className='text'>Đăng ký</div>
-                    </div>
-                    <div className='helper'>
-                        <Link>Bạn cần giúp đỡ?</Link>
-                    </div>
-                </div>
-            </div>
+            <Header />
             <div className='signup-body'>
                 <div className='content-container'>
                     <div className='content-body'>
