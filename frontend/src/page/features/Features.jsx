@@ -1,17 +1,17 @@
 import React from 'react'
-import Footer from '../Footer/Footer'
-import HeaderHome from './../Headerhome/HeaderHome';
+import { Outlet } from 'react-router-dom';
+import HeaderHome from '../../component/Header-home/HeaderHome';
 
-const Home = () => {
+const Features = () => {
     return (
         <div className='home'>
             <HeaderHome />
             <div className='container'>
-
+                <Outlet></Outlet>
             </div>
             {/* <Footer /> */}
         </div>
     )
 }
 
-export default Home
+export default Features
