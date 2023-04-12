@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path='/sign-up' element={<Signup />} />
         <Route path='/sign-up2' element={<Signup2 />} />
-        <Route path='/purchasehistory' element={<PurchaseHistory />} />
+        {/* <Route path='/purchasehistory' element={<PurchaseHistory />} /> */}
 
       </Routes>
     </div>
