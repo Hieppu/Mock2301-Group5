@@ -1,10 +1,11 @@
-const MainPurchase = () =>{
+import { Outlet } from "react-router";
+
+const MainPurchase = (props) =>{
     return(
         <div>
-            Main purchasehistory
+            
         </div>
     )
 }
-
 
 export default MainPurchase;

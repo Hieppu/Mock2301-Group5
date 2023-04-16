@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import CustomLinks from '../../../custom/customlinks/CustomLink';
+// import CustomLinks from '../../../custom/customlinks/CustomLink';
+import CustomLinks2 from '../../../custom/customlinks/CustomLinks2'
 import menuLinksPH from '../../../data/menulinkspurchase/menuLinksPH';
 
 const SubNavicationContainer = styled.div`
@@ -28,10 +29,9 @@ const SubNavication = (props) =>{
                 <span>Anh <b>Nguyễn Sơn Tùng</b></span>
                 <Link to='/'>Đăng xuất</Link>
             </div>
-
-            <div className='subNavication-container'>
-                <CustomLinks menuLinks={menuLinksPH} />
-            </div>
+                {/* <CustomLinks menuLinks={menuLinksPH} /> */}
+                <CustomLinks2 menuLinks={menuLinksPH} />
+            
 
             <div className='subNavication-footer'>
 
