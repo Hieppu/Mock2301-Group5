@@ -1,12 +1,12 @@
 const menuLinksPH =[
     {
         text: 'Đơn hàng đã mua',
-        link: '/donhang',
+        link: '/purchasehistory/donhang',
         icon: ''
     },
     {
         text: 'Thông tin và sổ địa chỉ',
-        link: '/infor-address',
+        link: '/purchasehistory/infor-address',
         icon: ''
     }
 ]

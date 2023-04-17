@@ -1,7 +1,8 @@
 import SubNavication from "./subnavication/subnavication";
+import { Routes, Route, Outlet}  from 'react-router-dom';
 
 import styled from 'styled-components';
-import { Outlet } from "react-router";
+
 // import MainPurchase from "./mainpurchase/MainPurchase";
 
 const PurchaseHistoryContainer = styled.div`
@@ -15,7 +16,7 @@ const PurchaseHistory = (props) =>{
         <PurchaseHistoryContainer className="PurchaseHistory">
             <SubNavication />
             <div className='purchase-history-content'>
-                <Outlet/>
+                <Outlet />
             </div>
 
         </PurchaseHistoryContainer>
