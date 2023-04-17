@@ -7,20 +7,25 @@ import Cart from './page/features/cart/Cart';
 import Notification from './page/features/notification/Notification';
 import Features from './page/features/Features';
 import Home from './page/features/home/Home';
+import PurchaseHistory from './page/purchasehistory/PurchaseHistory';
+import DonHang from './page/donhang/DonHang';
 
 function App() {
   return (
     <div className="App">
 
       <Routes>
-
         <Route path='/sign-up' element={<Signup />} />
         <Route path='/sign-up2' element={<Signup2 />} />
 
         <Route path='/' element={<Features />} >
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/notification' element={<Notification />}></Route>
+          <Route path='/notification' element={<Notification />} />
+        </Route>
+
+        <Route path='/purchasehistory' element={<PurchaseHistory />}>
+          <Route path="/purchasehistory/donhang" element={<DonHang />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
