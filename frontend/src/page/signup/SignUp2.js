@@ -1,49 +1,22 @@
-import React, { useState } from 'react'
-import { validationSchema } from './../ValidationSchema';
+import React from 'react'
+import { Link } from 'react-router-dom';
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import './Signup2.scss'
+
+import { validationSchema } from './../ValidationSchema';
+
 import {
     Button,
     TextField,
     Typography,
-    Box
 } from "@mui/material";
-import Footer from '../footer/Footer';
-import { Link } from 'react-router-dom';
-import Toast from '../../custom/customtoast/Toast';
-// import { Button } from '../../custom/ImportCustom';
-import { FaCheckCircle } from 'react-icons/fa'
-const Signup = (props) => {
 
-    const [list, setList] = useState([]);
-    let toastProperties = null;
+import Footer from '../../component/Footer/Footer';
+import Header from '../../component/Header/Header';
 
-    const showToast = type => {
-        switch (type) {
-            case 'success':
-                toastProperties = {
-                    id: list.length + 1,
-                    title: 'Success',
-                    description: 'This is a success toast component',
-                    backgroundColor: '#5cb85c',
-                    icon: FaCheckCircle
-                }
-                break;
-            case 'danger':
-                toastProperties = {
-                    id: list.length + 1,
-                    title: 'Danger',
-                    description: 'This is a danger toast component',
-                    backgroundColor: '#d9534f'
-                }
-                break;
-            default:
-                toastProperties = [];
-        }
-        setList([...list, toastProperties]);
-    };
+import styles from './Signup2.module.scss'
 
+const Signup2 = (props) => {
     const schema = validationSchema
     const { control, register, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
@@ -57,58 +30,42 @@ const Signup = (props) => {
         },
         resolver: yupResolver(schema)
     });
-    const onSubmit = data => {
+    const onSubmit = (data) => {
         console.log(data)
-        return (
-            <Toast toastlist={list} position="button-right" setList={setList} />
-        )
     };
     return (
-        <div className='signup-container'>
-            <div className="signup-header">
-                <div className='form-text'>
-                    <div className='link-content'>
-                        <Link className='logo-mobile'>
-                            <img src="../../../image/logomobile.png" alt="" />
-                        </Link>
-                        <div className='text'>Đăng ký</div>
-                    </div>
-                    <div className='helper'>
-                        <Link>Bạn cần giúp đỡ?</Link>
-                    </div>
-                </div>
-            </div>
-            <div className='signup-body'>
-                <div className='content-container'>
-                    <div className='content-body'>
-                        <div className='form-signup'>
-                            <div className='image'>
-                                <img src="../../../image/logomobilepart3.png" alt="" />
+        <div className={styles.signUpContainer}>
+            <Header />
+            <div className={styles.signUpBody}>
+                <div className={styles.contentContainer}>
+                    <div className={styles.contentBody}>
+                        <div className={styles.formSignUp}>
+                            <div className={styles.image}>
+                                <img src="../../../image/logo/logomobilepart3.png" alt="" />
                             </div>
-                            <div className='form'>
+                            <div className={styles.form}>
                                 <form onSubmit={handleSubmit(onSubmit)}>
-                                    <div className='form-main'>
-                                        <div className='form-container'>
-                                            <div className='form-text'>
-                                                <Typography className='text-signup'>
+                                    <div className={styles.formMain}>
+                                        <div className={styles.formContainer}>
+                                            <div className={styles.formText}>
+                                                <Typography className={styles.textSignUp}>
                                                     Sign Up
                                                 </Typography>
                                             </div>
-                                            <div className='form-name'>
+                                            <div className={styles.formName}>
                                                 <Controller
                                                     name="firstName"
                                                     control={control}
                                                     render={({ field: { onChange, onBlur, value, ref } }) => (
-                                                        <div className='formcontrol-input'>
+                                                        <div className={styles.formControlInput}>
                                                             <TextField
-                                                                className='form-input'
+                                                                className={styles.formInput}
                                                                 {...register}
                                                                 fullWidth
                                                                 onChange={onChange}
                                                                 margin="dense"
                                                                 label="First Name *"
                                                                 autoComplete='firstName'
-                                                                autoFocus
                                                                 error={!!errors?.firstName}
                                                                 helperText={errors?.firstName ? errors.firstName.message : null} />
                                                         </div>
@@ -118,16 +75,15 @@ const Signup = (props) => {
                                                     name="lastName"
                                                     control={control}
                                                     render={({ field: { onChange, onBlur, value, ref } }) => (
-                                                        <div className='formcontrol-input'>
+                                                        <div className={styles.formControlInput}>
                                                             <TextField
-                                                                className='formcontrol-input'
+                                                                className={styles.formInput}
                                                                 {...register}
                                                                 fullWidth
                                                                 onChange={onChange}
                                                                 margin="dense"
                                                                 label="Last Name *"
                                                                 autoComplete='lastName'
-                                                                autoFocus
                                                                 error={!!errors?.lastName}
                                                                 helperText={errors?.lastName ? errors.lastName.message : null} />
                                                         </div>
@@ -135,20 +91,19 @@ const Signup = (props) => {
                                                 />
 
                                             </div>
-                                            <div className='form-group'>
+                                            <div className={styles.formGroup}>
                                                 <Controller
                                                     name="username"
                                                     control={control}
                                                     render={({ field: { onChange, onBlur, value, ref } }) => (
                                                         <TextField
-                                                            className='form-input'
+                                                            className={styles.formInput}
                                                             {...register}
                                                             fullWidth
                                                             onChange={onChange}
                                                             margin="dense"
                                                             label="User Name *"
                                                             autoComplete='username'
-                                                            autoFocus
                                                             error={!!errors?.username}
                                                             helperText={errors?.username ? errors.username.message : null} />
                                                     )}
@@ -158,14 +113,13 @@ const Signup = (props) => {
                                                     control={control}
                                                     render={({ field: { onChange, onBlur, value, ref } }) => (
                                                         <TextField
-                                                            className='form-input'
+                                                            className={styles.formInput}
                                                             {...register}
                                                             fullWidth
                                                             onChange={onChange}
                                                             margin="dense"
                                                             label="Email *"
                                                             autoComplete='email'
-                                                            autoFocus
                                                             error={!!errors?.email}
                                                             helperText={errors?.email ? errors.email.message : null} />
                                                     )}
@@ -175,14 +129,13 @@ const Signup = (props) => {
                                                     control={control}
                                                     render={({ field: { onChange, onBlur, value, ref } }) => (
                                                         <TextField
-                                                            className='form-input'
+                                                            className={styles.formInput}
                                                             {...register}
                                                             fullWidth
                                                             onChange={onChange}
                                                             margin="dense"
                                                             label="Address *"
                                                             autoComplete='address'
-                                                            autoFocus
                                                             error={!!errors?.address}
                                                             helperText={errors?.address ? errors.address.message : null} />
                                                     )}
@@ -192,14 +145,13 @@ const Signup = (props) => {
                                                     control={control}
                                                     render={({ field: { onChange, onBlur, value, ref } }) => (
                                                         <TextField
-                                                            className='form-input'
+                                                            className={styles.formInput}
                                                             {...register}
                                                             fullWidth
                                                             onChange={onChange}
                                                             margin="dense"
                                                             label="Phone *"
                                                             autoComplete='phone'
-                                                            autoFocus
                                                             error={!!errors?.phone}
                                                             helperText={errors?.phone ? errors.phone.message : null} />
                                                     )}
@@ -208,9 +160,8 @@ const Signup = (props) => {
                                                     name="password"
                                                     control={control}
                                                     render={({ field: { onChange, onBlur, value, ref } }) => (
-
                                                         <TextField
-                                                            className='form-input'
+                                                            className={styles.formInput}
                                                             {...register}
                                                             fullWidth
                                                             onChange={onChange}
@@ -218,15 +169,14 @@ const Signup = (props) => {
                                                             margin="dense"
                                                             label="Password *"
                                                             autoComplete='password'
-                                                            autoFocus
                                                             error={!!errors?.password}
                                                             helperText={errors?.password ? errors.password.message : null} />
                                                     )}
                                                 />
-                                                <Button className='btn-submit' type='submit'>
+                                                <Button className={styles.btnSubmit} type='submit' >
                                                     Submit
                                                 </Button>
-                                                <Typography className='text-contract'>
+                                                <Typography className={styles.textContract}>
                                                     Bằng việc đăng ký, bạn đã đồng ý với TheGioiDiDong về <Link>Điều khoản dịch vụ</Link> & <Link>Chính sách bảo mật</Link>
                                                 </Typography>
                                             </div>
@@ -236,7 +186,6 @@ const Signup = (props) => {
                             </div>
                         </div>
                     </div>
-                    {/* <Toast toastlist={list} position="button-right" setList={setList} /> */}
                 </div>
             </div>
             <Footer />
@@ -244,4 +193,4 @@ const Signup = (props) => {
     )
 }
 
-export default Signup
+export default Signup2

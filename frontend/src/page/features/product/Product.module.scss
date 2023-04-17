@@ -1,0 +1,133 @@
+.boxContent {
+    h1 {
+        display: block;
+        overflow: hidden;
+        padding: 15px 10px;
+        font-size: 22px;
+        line-height: 36px;
+        color: #333;
+        text-transform: uppercase;
+    }
+
+    .listProduct {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        .box {
+            .product {
+                background: #fff;
+                padding: 15px;
+                position: relative;
+                border-radius: 8px;
+                box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+                margin: 10px;
+
+                .item {
+                    text-decoration: none;
+                    transition: .2s;
+
+                    &:hover {
+                        h3 {
+                            transition: .2s;
+                            color: #288ad6;
+                        }
+
+                        .img {
+                            .itemImg {
+                                img {
+                                    margin-top: 0;
+                                    margin-bottom: 8px;
+                                }
+                            }
+                        }
+                    }
+
+                    .img {
+                        .discount {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background: #e94560;
+                            padding: 3px 10px;
+                            font-size: 12px;
+                            border-radius: 50px;
+                            color: #fff;
+                            margin: 10px;
+                        }
+
+                        .itemImg {
+                            height: 250px;
+                            line-height: 220px;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 8px;
+                            margin-top: 20px;
+
+                            img {
+                                max-width: 100%;
+                                margin: 0 auto;
+                                max-height: 95%;
+                                object-fit: contain;
+                                transition: all 300ms ease-in-out;
+                            }
+                        }
+                    }
+                }
+
+                .productDetails {
+                    h3 {
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #333;
+                        margin-bottom: 8px;
+                        line-height: 21px;
+                    }
+
+
+
+                    .rate {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .star {
+                            display: flex;
+                            align-items: center;
+
+                            b {
+                                color: #fb6e2e;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+
+                            svg {
+                                color: #e94560;
+                                margin: 0 10px 2px 5px;
+                            }
+                        }
+
+                        button {
+                            background: none;
+                            color: #e94560;
+                            font-size: 20px;
+                            transition: 0.5s;
+                            border: 1px solid rgb(3 0 71 / 9%);
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .price {
+                    h4 {
+                        color: #d0021c;
+                        font-size: 18px;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+
+        }
+    }
+}
