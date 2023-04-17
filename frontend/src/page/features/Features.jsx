@@ -1,15 +1,19 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom';
+
 import HeaderHome from '../../component/Header-home/HeaderHome';
+import Footer from '../../component/Footer/Footer';
+
+import styles from './Features.module.scss'
 
 const Features = () => {
     return (
-        <div className='home'>
+        <div className={styles.home}>
             <HeaderHome />
-            <div className='container'>
-                <Outlet></Outlet>
+            <div className={styles.container}>
+                <Outlet />
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }

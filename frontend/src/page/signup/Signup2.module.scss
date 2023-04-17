@@ -1,0 +1,104 @@
+.signUpContainer {
+
+    .signUpBody {
+        .contentContainer {
+            .contentBody {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(248, 241, 233);
+                margin-top: 60px;
+
+                .formSignUp {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 1040px;
+                    margin: 0 auto;
+                    padding: 25px;
+
+                    .image {
+                        img {
+                            width: 300px;
+                            margin-right: 250px;
+                        }
+                    }
+
+                    .form {
+                        display: flex;
+                        justify-content: center;
+
+                        .formMain {
+                            display: flex;
+                            width: 100%;
+                            justify-content: center;
+
+                            .formContainer {
+                                min-height: 10vh;
+                                width: 100%;
+                                box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+                                    0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+                                    0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+                                border-radius: 20px;
+                                padding: 10px 16px 10px 16px;
+                                background-color: #fff;
+
+                                .formText {
+                                    .textSignUp {
+                                        display: flex;
+                                        justify-content: center;
+                                        font-size: 20px;
+                                        font-weight: 600;
+                                        color: rgb(255, 198, 2);
+                                    }
+                                }
+
+                                .textContract {
+                                    text-align: center;
+                                    margin-top: 20px;
+                                    font-size: 0.8rem;
+                                    padding: 0 30px;
+
+                                    a {
+                                        text-decoration: none;
+                                        color: rgb(255, 198, 2);
+                                    }
+                                }
+
+                                .formName {
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    .formControlInput {
+
+                                        &:first-child {
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                }
+
+                                .formGroup {
+                                    .formInput {
+                                        input {
+                                            padding: 3px 10px;
+                                            height: 3rem;
+                                        }
+                                    }
+
+                                    .btnSubmit {
+                                        color: #fff;
+                                        background-color: #1976d2;
+                                        padding: 10px;
+                                        width: 100%;
+                                        margin-top: 10px
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
