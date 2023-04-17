@@ -20,17 +20,17 @@ function App() {
 
         <Route path='/sign-up' element={<Signup />} />
         <Route path='/sign-up2' element={<Signup2 />} />
-        <Route path='/purchasehistory' element={<PurchaseHistory />}>
-          <Route path="donhang" element={<DonHang />} />
-          <Route path="infor-address" element={<InforAddress />} />
-
-        </Route>
+        
         <Route path='/' element={<Features />} >
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/notification' element={<Notification />}></Route>
         </Route>
+        <Route path='/purchasehistory' element={<PurchaseHistory />}>
+          <Route path="donhang" element={<DonHang />} />
+          <Route path="infor-address" element={<InforAddress />} />
 
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div >

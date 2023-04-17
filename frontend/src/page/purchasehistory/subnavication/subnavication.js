@@ -12,6 +12,7 @@ const SubNavicationContainer = styled.div`
     background-color: #ccc;
     padding: 4px;
     flex-decription: between-space;
+
     
     .subNavication-header span{
         border-right: 1px black solid;
