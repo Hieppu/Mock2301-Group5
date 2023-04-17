@@ -1,5 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import DonHang from './page/purchasehistory/donhang/DonHang';
+import PurchaseHistory from './page/purchasehistory/PurchaseHistory';
 import Signup from './page/signup/SignUp';
 import Signup2 from './page/signup/SignUp2';
 import NotFound from './page/notfound/NotFound';
@@ -7,8 +9,7 @@ import Cart from './page/features/cart/Cart';
 import Notification from './page/features/notification/Notification';
 import Features from './page/features/Features';
 import Home from './page/features/home/Home';
-import PurchaseHistory from './page/purchasehistory/PurchaseHistory';
-import DonHang from './page/donhang/DonHang';
+
 
 function App() {
   return (
