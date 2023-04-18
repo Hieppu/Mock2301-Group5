@@ -28,6 +28,10 @@ const Search = () => {
 
                 <div className={styles.icon}>
                     <div className={styles.cart}>
+                        <Link to='/' className={styles.history}>
+                            {/* <span>{CartItem.length === 0 ? "" : CartItem.length}</span> */}
+                            <span>Lịch sử mua hàng</span>
+                        </Link>
                         <Link to='/cart'>
                             <AiOutlineShoppingCart />
                             {/* <span>{CartItem.length === 0 ? "" : CartItem.length}</span> */}
