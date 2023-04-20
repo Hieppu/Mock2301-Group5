@@ -10,28 +10,26 @@ import Notification from './page/features/notification/Notification';
 import Features from './page/features/Features';
 import Home from './page/features/home/Home';
 
-
 function App() {
   return (
     <div className="App">
-
       <Routes>
-        <Route path='/sign-up' element={<Signup />} />
-        <Route path='/sign-up2' element={<Signup2 />} />
+        <Route path="/sign-up" element={<Signup />} />
+        <Route path="/sign-up2" element={<Signup2 />} />
 
-        <Route path='/' element={<Features />} >
-          <Route path='/' element={<Home />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/notification' element={<Notification />} />
+        <Route path="/" element={<Features />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/notification" element={<Notification />} />
         </Route>
 
-        <Route path='/purchasehistory' element={<PurchaseHistory />}>
+        <Route path="/purchasehistory" element={<PurchaseHistory />}>
           <Route path="/purchasehistory/donhang" element={<DonHang />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </div >
+    </div>
   );
 }
 
