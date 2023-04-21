@@ -49,6 +49,9 @@ public class Account {
     @Column(name = "join_date")
     private LocalDateTime joinDate;
 
+    @Column(name = "token")
+    private String token;
+
     public enum AccountStatus {
         ACTIVE, NOT_ACTIVE;
     }
@@ -64,6 +67,13 @@ public class Account {
             return null;
         }
     }
+
+    // tao tk : tao moi 1 tk , sau do vao emil click xac nhan
+    // viet API tao moi 1 tk status  NOT_ACTIVE
+    // sau khi tao confirm
+    // active tk  api/v1/active
+    // gui mail http://localhost:8080/api/v1/active?token=
+    //
 
 
 }
