@@ -1,0 +1,31 @@
+.PurchaseCard{
+    padding: 8px 18px;
+    min-height: 11rem;
+    box-shadow: inset;
+    .title{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        .codeOder span{
+            font-weight: 600;
+        }
+        .status{
+            color: red;
+        }
+    }
+    .content{
+        display: flex;
+        width: 100%;
+        border-top: 1px #ccc solid;
+        padding-top: 4px;
+        .desciption{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .img{
+            height: 3.75rem;
+            width: auto;
+        }
+    }
+}

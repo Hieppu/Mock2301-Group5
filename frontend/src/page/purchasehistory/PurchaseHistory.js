@@ -8,6 +8,11 @@ import styled from 'styled-components';
 const PurchaseHistoryContainer = styled.div`
     display: flex;
     width: 100%;
+    background-color: #edf0f5;
+    .purchase-history-content{
+        width: 100%;
+        margin-left: 3rem;
+    }
     
 `
 
