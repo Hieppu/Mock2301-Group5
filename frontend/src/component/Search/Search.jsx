@@ -22,7 +22,7 @@ const Search = () => {
 
                 <div className={styles.searchBox}>
                     <FiSearch />
-                    <input type='text' placeholder='Search and hit enter...' />
+                    <input type='text' placeholder='Search and hit enter....' />
                     <span>All Category</span>
                 </div>
 
