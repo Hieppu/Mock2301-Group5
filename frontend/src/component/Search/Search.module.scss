@@ -22,7 +22,7 @@
 
         .searchBox {
             display: flex;
-            width: 80%;
+            width: 55%;
             border: 2px solid rgba(0, 0, 0, 0.1);
             border-radius: 50px;
             align-items: center;
@@ -55,6 +55,17 @@
             display: flex;
             justify-content: flex-end;
 
+            .cart {
+                display: flex;
+
+                .history {
+                    margin-left: 5px;
+                    span{
+                        text-align: center;
+                    }
+                }
+            }
+
             a {
                 background: rgba(255, 172, 10, .6);
                 display: flex;
@@ -64,9 +75,15 @@
                 padding: 8px 10px;
                 border-radius: 4px;
 
+                &:first-child {
+                    margin-right: 5px;
+                }
+                span {
+                    font-size: 14px;
+                }
                 svg {
-                    width: 40px;
-                    height: 40px;
+                    width: 30px;
+                    height: 30px;
                     margin-right: 5px;
                 }
             }
