@@ -43,7 +43,7 @@ public class Account {
     private AccountRole role;
 
     @Column(name = "status", nullable = false)
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private AccountStatus status;
 
     @Column(name = "join_date")

@@ -16,6 +16,7 @@ CREATE TABLE `Account`(
     avatar_url VARCHAR(250) NULL UNIQUE KEY,
     `role`  ENUM("ADMIN", "USER"),
     `status` ENUM("ACTIVE", "NOT_ACTIVE"),
+    token VARCHAR(250) NULL UNIQUE KEY,
     joined_date DATE DEFAULT(NOW())	
 );
 -- Insert vào account
@@ -30,7 +31,7 @@ DROP TABLE IF EXISTS 	ConfirmationToken;
 CREATE TABLE IF NOT EXISTS ConfirmationToken ( 	
 	token_id 			INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	confirmationToken	CHAR(36) NOT NULL UNIQUE,
-	createdDate		SMALLINT UNSIGNED NOT NULL
+	createdDate			DATE DEFAULT(NOW())	
 );
 -- Tạo Table Category
 DROP TABLE IF EXISTS Category;
