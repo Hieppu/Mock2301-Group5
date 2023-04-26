@@ -46,7 +46,7 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private AccountStatus status;
 
-    @Column(name = "join_date")
+    @Column(name = "joined_date")
     private LocalDateTime joinDate;
 
     @Column(name = "token")

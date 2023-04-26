@@ -1,19 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import DonHang from './page/purchasehistory/donhang/DonHang';
-import PurchaseHistory from './page/purchasehistory/PurchaseHistory';
-import Signup from './page/signup/SignUp';
-import Signup2 from './page/signup/SignUp2';
 import NotFound from './page/notfound/NotFound';
-import Cart from './page/features/cart/Cart';
-import Notification from './page/features/notification/Notification';
-import Features from './page/features/Features';
-import Home from './page/features/home/Home';
+import { publicRoutes } from './routes';
 
 function App() {
   return (
     <div className="App">
-      <Routes>
+      {/* <Routes>
         <Route path="/sign-up" element={<Signup />} />
         <Route path="/sign-up2" element={<Signup2 />} />
 
@@ -23,9 +16,26 @@ function App() {
           <Route path="/notification" element={<Notification />} />
         </Route>
 
-        <Route path="/purchasehistory" element={<PurchaseHistory />}>
+        <Route path="/purchase-history" element={<PurchaseHistory />}>
           <Route path="/purchasehistory/donhang" element={<DonHang />} />
         </Route>
+
+        <Route path="*" element={<NotFound />} />
+      </Routes> */}
+      <Routes>
+        {publicRoutes.map((publicRoute, index) => {
+          const Component = publicRoute.component;
+          return (
+            <Route key={index} path={publicRoute.path} element={<Component />}>
+              {publicRoute.childRoute?.map((item, childIndex) => {
+                const ChildComponent = item.component;
+
+                const childPath = publicRoute.path + item.path;
+                return <Route key={childIndex} path={childPath} element={<ChildComponent />} />;
+              })}
+            </Route>
+          );
+        })}
 
         <Route path="*" element={<NotFound />} />
       </Routes>
