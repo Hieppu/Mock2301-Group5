@@ -55,7 +55,7 @@ public class AccountService implements IAccountService {
 
         // gui email
         String text = "click vào đây: \n ";
-        String link = text + "http://localhost:8888/api/accounts/register/active?token=" + ac.getToken();
+        String link = text + "http://localhost:3000/api/accounts/register/active?token=" + ac.getToken();
 
         SimpleMailMessage passwordResetEmail = new SimpleMailMessage();
         passwordResetEmail.setTo(ac.getEmail());

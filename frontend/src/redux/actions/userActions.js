@@ -23,9 +23,37 @@ const registerUser = (user) => async (dispatch) => {
     });
   }
 };
-
+const resetPassword = (token) => async (dispatch) => {
+  dispatch({
+    type: actionTypes.ACTIVE_USER_REQUEST,
+  });
+  try {
+    const response = await axios({
+      method: 'POST',
+      url: '/api/auth/register/active',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      params: {
+        token: token.token,
+      },
+    });
+    dispatch({
+      type: actionTypes.ACTIVE_USER_SUCCESS,
+      payload: response.data,
+    });
+  } catch (error) {
+    dispatch({
+      type: actionTypes.ACTIVE_USER_FAIL,
+      payload: {
+        statusCode: error.response.status,
+        message: error.response.data,
+      },
+    });
+  }
+};
 const userActions = {
   registerUser,
 };
 
-export default userActions
+export default userActions;

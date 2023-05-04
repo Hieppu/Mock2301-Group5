@@ -1,4 +1,5 @@
 import { compose } from 'redux';
+import ActiveRegister from '~/component/ActiveRegister/ActiveRegister';
 import DonHang from '~/page/donhang/DonHang';
 import Features from '~/page/features/Features';
 import Cart from '~/page/features/cart/Cart';
@@ -24,6 +25,10 @@ const publicRoutes = [
     component: PurchaseHistory,
     childRoute: [{ path: '/don-hang', component: DonHang }],
   },
+  {
+    path: '/active/account',
+    component: ActiveRegister,
+  }
 ];
 
 const privateRoutes = [];
