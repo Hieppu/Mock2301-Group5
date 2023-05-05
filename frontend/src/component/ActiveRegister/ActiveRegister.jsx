@@ -1,10 +1,12 @@
 import HeaderHome from '../Header-home/HeaderHome';
 import styles from './ActiveRegister.module.scss';
 import Footer from './../Footer/Footer';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import userActions from '~/redux/actions/userActions';
+import { dispatch } from 'redux';
+import { connect, useDispatch } from 'react-redux';
 
-function ActiveRegister() {
+function ActiveRegister(props) {
   const [counter, setCounter] = useState(3);
 
   useEffect(() => {
@@ -35,4 +37,17 @@ function ActiveRegister() {
   );
 }
 
-export default ActiveRegister;
+const mapStateToProps = (state) => {
+  return {
+    messageActiveSuccess: state.userInfo.messageActiveSuccess,
+  };
+};
+
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    activeAccount: (token) => {
+      dispatch(userActions.activeAccount(token));
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(ActiveRegister);

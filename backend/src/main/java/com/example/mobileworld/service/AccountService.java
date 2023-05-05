@@ -14,6 +14,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Service
@@ -55,8 +56,8 @@ public class AccountService implements IAccountService {
 
         // gui email
         String text = "click vào đây: \n ";
-        String link = text + "http://localhost:3000/api/accounts/register/active?token=" + ac.getToken();
-
+//        String link = text + "http://localhost:3000/api/accounts/register/active?token=" + ac.getToken();
+        String link = text + "http://localhost:3000/active/account?token=" + ac.getToken();
         SimpleMailMessage passwordResetEmail = new SimpleMailMessage();
         passwordResetEmail.setTo(ac.getEmail());
         passwordResetEmail.setSubject("Active account");
@@ -75,6 +76,7 @@ public class AccountService implements IAccountService {
         // update status cho account đó
         account.setToken("");
         account.setStatus(Account.AccountStatus.ACTIVE);
+        account.setJoinDate(LocalDateTime.now());
         accountRepository.save(account);
     }
 }

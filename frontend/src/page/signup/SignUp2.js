@@ -28,7 +28,7 @@ const Signup2 = (props) => {
       username: '',
       email: '',
       address: '',
-      phone: '',
+      phoneNumber: '',
       password: '',
     },
     resolver: yupResolver(schema),
@@ -146,7 +146,7 @@ const Signup2 = (props) => {
                           )}
                         />
                         <Controller
-                          name="phone"
+                          name="phoneNumber"
                           control={control}
                           render={({ field: { onChange, onBlur, value, ref } }) => (
                             <TextField
@@ -157,8 +157,8 @@ const Signup2 = (props) => {
                               margin="dense"
                               label="Phone *"
                               autoComplete="phone"
-                              error={!!errors?.phone}
-                              helperText={errors?.phone ? errors.phone.message : null}
+                              error={!!errors?.phoneNumber}
+                              helperText={errors?.phoneNumber ? errors.phoneNumber.message : null}
                             />
                           )}
                         />

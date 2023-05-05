@@ -17,7 +17,7 @@ public class SignupDTO {
 
 	private String address;
 
-	private String phone;
-	
+	private String phoneNumber;
+
 	private String password;
 }

@@ -23,19 +23,16 @@ const registerUser = (user) => async (dispatch) => {
     });
   }
 };
-const resetPassword = (token) => async (dispatch) => {
+const activeAccount = (token) => async (dispatch) => {
   dispatch({
     type: actionTypes.ACTIVE_USER_REQUEST,
   });
   try {
     const response = await axios({
-      method: 'POST',
-      url: '/api/auth/register/active',
+      method: 'PUT',
+      url: `/api/auth/register/active?token=${token}`,
       headers: {
         'Content-Type': 'application/json',
-      },
-      params: {
-        token: token.token,
       },
     });
     dispatch({
@@ -54,6 +51,7 @@ const resetPassword = (token) => async (dispatch) => {
 };
 const userActions = {
   registerUser,
+  activeAccount,
 };
 
 export default userActions;

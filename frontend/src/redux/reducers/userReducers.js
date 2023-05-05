@@ -1,16 +1,18 @@
 import actionTypes from '../constants/constants';
 
 const initState = {
+  isLoading: false,
   user: {
     firstName: '',
     lastName: '',
     username: '',
     email: '',
     address: '',
-    phone: '',
+    phoneNumber: '',
     password: '',
   },
   messageRegisterSuccess: null,
+  messageActiveSuccess: null,
 };
 
 const userReducer = (state = initState, action) => {
@@ -31,7 +33,22 @@ const userReducer = (state = initState, action) => {
         // isLoading: false,
         messageRegisterSuccess: 'Bạn đã đăng ký thành công xin hãy vào gmail active tài khoản',
       };
-
+    case actionTypes.ACTIVE_USER_REQUEST:
+      return {
+        ...state,
+        // isLoading: true,
+      };
+    case actionTypes.ACTIVE_USER_SUCCESS:
+      return {
+        ...state,
+        // isLoading: false,
+      };
+    case actionTypes.ACTIVE_USER_FAIL:
+      return {
+        ...state,
+        // isLoading: false,
+        messageActiveSuccess: 'Bạn đã kích hoạt thành công',
+      };
     default:
       return state;
   }
