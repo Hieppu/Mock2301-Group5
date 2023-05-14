@@ -11,6 +11,7 @@ const initState = {
     phoneNumber: '',
     password: '',
   },
+  listCard: [],
   messageRegisterSuccess: null,
   messageActiveSuccess: null,
 };
@@ -49,6 +50,23 @@ const userReducer = (state = initState, action) => {
         // isLoading: false,
         messageActiveSuccess: 'Bạn đã kích hoạt thành công',
       };
+
+
+
+      // card data
+      case actionTypes.API_REQUEST:
+        return{
+          ...state
+        }
+      case actionTypes.API_SUCCESS:
+        return{
+          ...state,
+          listCard: action.payload,
+        }
+      case actionTypes.API_FAIL:
+        return{
+          ...state
+        }
     default:
       return state;
   }

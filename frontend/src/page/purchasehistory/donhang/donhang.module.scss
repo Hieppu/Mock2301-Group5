@@ -2,6 +2,8 @@
     .header{
         display: flex;
         padding: 4px;
+        border-bottom: 1px solid #ccc;
+        margin-right: 10%;
         h3{
             margin-right: 2rem;
         }
@@ -9,8 +11,8 @@
 
     .listItem{
         height: auto;
-        width: 70%;
-        background-color: white;
+        width: 90%;
+        // background-color: white;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }

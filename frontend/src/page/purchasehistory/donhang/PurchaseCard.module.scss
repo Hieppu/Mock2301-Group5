@@ -1,16 +1,23 @@
 .PurchaseCard{
     padding: 8px 18px;
-    min-height: 11rem;
+    min-height: 8rem;
     box-shadow: inset;
+    background-color: white;
+    margin-bottom: 1rem;
     .title{
         display: flex;
         justify-content: space-between;
         margin-bottom: 8px;
         .codeOder span{
             font-weight: 600;
+            span{
+                font-size: 14px;
+                margin-left: 1.2rem;
+            }
         }
         .status{
             color: red;
+            font-size: 14px;
         }
     }
     .content{
@@ -27,5 +34,8 @@
             height: 3.75rem;
             width: auto;
         }
+    }
+    .button{
+        margin-left: 84%;
     }
 }

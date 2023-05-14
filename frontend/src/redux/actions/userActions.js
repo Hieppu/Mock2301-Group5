@@ -49,9 +49,34 @@ const activeAccount = (token) => async (dispatch) => {
     });
   }
 };
+
+
+const cardAPI =() => async (dispatch) =>{
+  dispatch({
+    type: actionTypes.API_REQUEST
+  });
+  try{
+    const response = await axios({
+      method: 'GET',
+      url: 'https://645e5f408d08100293fdef79.mockapi.io/api/v1/card/' 
+    });
+    dispatch({
+      type:actionTypes.API_SUCCESS,
+      payload: response.data
+    })
+    // console.log(response.data);
+  }
+  catch (err){
+    dispatch({
+      type: actionTypes.API_FAIL,
+      // payload: err.response.data
+    })
+  }
+}
 const userActions = {
   registerUser,
   activeAccount,
+  cardAPI
 };
 
 export default userActions;

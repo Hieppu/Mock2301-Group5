@@ -1,5 +1,11 @@
+import { useState } from 'react';
 import styles from './inforAddress.module.scss'
 const InforAddress = () =>{
+    const [userAdress, setUserAdress] = useState({
+        gender: 'male',
+        fullName: 'Nguyễn Sơn Tùng',
+        phoneNumber: "0332873278"
+    });
     return(
         <div className={styles.InforAddress}>
             <div className={styles.header}>
@@ -9,20 +15,27 @@ const InforAddress = () =>{
             <div className={styles.content}>
                 <div className={styles.contentHeader}>
                     <b>Thông Tin Cá Nhân</b>
-                    <p>{} {} - {}</p>
+                    <p>{userAdress.gender} {userAdress.fullName} - {userAdress.phoneNumber}</p>
                 </div>
 
                 <div className={styles.contentBody} >
-                    <div className='title'>
+                    <form className={styles.formSelect} action="https://httpbin.org/anything" method="post">
+                        <label for="lang-select">Địa Chỉ Nhận Hàng</label>
+                        <br/>
+                        <select className={styles.select} name="lang" id="lang-select">
+                            <option value="">--Tỉnh/Thành phố--</option>
+                        </select>
 
-                    </div>
+                        <select className={styles.select} name="lang" id="lang-select">
+                            <option value="">--Tỉnh/Thành phố--</option>
+                        </select>
 
-                    <form className='address'>
-                        <label>
-                            Name:
-                            <input type="password" name="name" />
-                        </label>
-                        <input type="submit" value="Submit" />
+
+                        <select className={styles.select} name="lang" id="lang-select">
+                            <option value="">--Tỉnh/Thành phố--</option>
+                        </select>
+
+                        <input className={styles.select} type="text" name='nơi cư chú'/>
                     </form>
                 </div>
             </div>
