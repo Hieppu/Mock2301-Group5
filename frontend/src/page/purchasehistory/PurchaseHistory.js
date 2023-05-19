@@ -8,7 +8,9 @@ import SubNavication from "./subnavication/subnavication";
 const PurchaseHistoryContainer = styled.div`
     display: flex;
     width: 100%;
+    margin-top:123px;
     background-color: #edf0f5;
+    min-height: 22rem;
     .purchase-history-content{
         width: 100%;
         margin-left: 3rem;

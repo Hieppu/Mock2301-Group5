@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 import { FiSearch, FiWatch } from 'react-icons/fi';
 import { FaTabletAlt } from 'react-icons/fa';
@@ -28,8 +28,10 @@ const Search = () => {
 
         <div className={styles.icon}>
           <div className={styles.cart}>
-            <Link to="/" className={styles.history}>
+            <Link to="/history" className={styles.history}>
               <span>Lịch sử mua hàng</span>
+              
+              
             </Link>
             <Link to="/cart">
               <AiOutlineShoppingCart />

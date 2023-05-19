@@ -1,6 +1,6 @@
 import ActiveRegister from '~/component/ActiveRegister/ActiveRegister';
 import WithLoading from '~/component/Loading/WithLoading';
-import DonHang from '~/page/donhang/DonHang';
+import DonHang from '~/page/purchasehistory/donhang/DonHang';
 import Features from '~/page/features/Features';
 import Cart from '~/page/features/cart/Cart';
 import Home from '~/page/features/home/Home';
@@ -14,16 +14,23 @@ const publicRoutes = [
     childRoute: [
       { path: '', component: Home },
       { path: '/cart', component: Cart },
+      // { path: '/history',
+      //   component: PurchaseHistory,
+      //   childRoute:[
+      //     { path: '/history/donhang', component: DonHang }
+      //   ]
+      // }
+      
     ],
   },
+  // {
+  //   path: '/history',
+  //   component: PurchaseHistory,
+  //   childRoute: [{ path: '/donhang', component: DonHang }],
+  // },
   {
     path: '/sign-up2',
     component: WithLoadingSignUp,
-  },
-  {
-    path: '/history',
-    component: PurchaseHistory,
-    childRoute: [{ path: '/don-hang', component: DonHang }],
   },
   {
     path: '/active/account',

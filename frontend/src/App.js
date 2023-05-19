@@ -1,6 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Features from './page/features/Features';
 import NotFound from './page/notfound/NotFound';
+import DonHang from './page/purchasehistory/donhang/DonHang';
+import InforAddress from './page/purchasehistory/infor_address/InforAddress';
+import PurchaseHistory from './page/purchasehistory/PurchaseHistory';
 import { publicRoutes } from './routes';
 
 function App() {
@@ -22,6 +26,8 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes> */}
+
+
       <Routes>
         {publicRoutes.map((publicRoute, index) => {
           const Component = publicRoute.component;
@@ -36,6 +42,15 @@ function App() {
             </Route>
           );
         })}
+
+        <Route path="/" element={<Features />}>
+          <Route path="/history" element={<PurchaseHistory />}>
+            <Route path="/history/donhang" element={<DonHang />} />
+            <Route path="/history/infor-address" element={<InforAddress />} />
+          </Route>  
+        </Route>
+
+
 
         <Route path="*" element={<NotFound />} />
       </Routes>

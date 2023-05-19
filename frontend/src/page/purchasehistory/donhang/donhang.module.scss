@@ -1,7 +1,10 @@
 .donhangContainer{
+    margin-top: 1rem;
     .header{
         display: flex;
         padding: 4px;
+        border-bottom: 1px solid #ccc;
+        margin-right: 10%;
         h3{
             margin-right: 2rem;
         }
@@ -9,10 +12,27 @@
 
     .listItem{
         height: auto;
-        width: 70%;
-        background-color: white;
+        width: 90%;
+        // background-color: white;
         margin-top: 1rem;
         margin-bottom: 1rem;
+    }
+
+    .footer{
+        width: 90%;
+        height: 30px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        .paging{
+            height: 100%;
+            width: 38px;
+            background-color: #ccc;
+            margin-right: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
     }
 }
 
