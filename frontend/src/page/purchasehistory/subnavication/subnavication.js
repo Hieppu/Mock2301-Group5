@@ -31,7 +31,8 @@ const SubNavicationContainer = styled.div`
     }
     
     .subNavication-header span{
-        margin-right: 4px;
+        // margin-right: 2px;
+        margin-left: 24px;
 
     }
     .subNavication-header span::after{
@@ -71,6 +72,7 @@ const SubNavicationContainer = styled.div`
             .app-qr{
                 height: 72px;
                 width: auto;
+                margin:0 1rem;
             }
         }
        }
@@ -82,18 +84,18 @@ const SubNavication = (props) =>{
     return (
         <SubNavicationContainer className="subnavication">
             <div className = 'subNavication-header'>
-                <span>Anh <b>{name}</b></span>
-                <Link to='/'>Đăng xuất</Link>
+                <span><b>{name}</b></span>
+                <Link to='/sign-up2'>Đăng xuất</Link>
             </div>
                 {/* <CustomLinks menuLinks={menuLinksPH} /> */}
                 <div className='menu-links'>
-                <CustomLinks2 menuLinks={menuLinksPH} />
+                    <CustomLinks2 menuLinks={menuLinksPH} />
                 </div>
             
 
             <div className='subNavication-footer'>
                 <div className="footer-head">
-                    Tổng điểm tích lũy: {}
+                    Tổng điểm tích lũy: {0}
                 </div>
 
                 <div className="footer-body">

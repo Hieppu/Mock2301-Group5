@@ -20,13 +20,16 @@ const GroupLink = styled.div `
     .menu-item.active {
         background-color: #e4e7ee;
     }
+    .menu-item.active i{
+        color: #288ad6;
+    }
 
     .menu-item span {
         margin-left: 30px
     }
-
+    
     .menu-item i {
-        font-size: .85rem;
+        font-size: 1.1rem;
     }
 `
 

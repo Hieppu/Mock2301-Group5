@@ -1,5 +1,5 @@
 import styles from './PurchaseCard.module.scss';
-import CustomButton from '../../../custom/custombutton/CustomButton';
+import CustomButton2 from '../../../custom/custombutton/CustomButton2';
 import { connect } from 'react-redux'
 import { useState, useEffect } from 'react';
 import userActions from '~/redux/actions/userActions';
@@ -45,7 +45,7 @@ const PurchaseCard = (props)=>{
                     <div className={styles.content}>
                         <img className={styles.img} alt="qr code" src="https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-200x200.jpg"/>
                         <div className={styles.desciption}>
-                            <span>{item.desciption}</span>
+                            <span>{item.description}</span>
                             <div>
                                 <span>Tổng tiềm: {item.price}</span>
                             </div>
@@ -53,9 +53,17 @@ const PurchaseCard = (props)=>{
                     </div>
                     
                     <div className={styles.button}>
-                        <CustomButton>
-                            Xem chi tiết
-                        </CustomButton>
+                        <CustomButton2
+                            type='submit'
+                            color='#F96F3A'
+                            backgroundColor= '#fff'
+                            width='100%'
+                            border='solid #F96F3A 1px'
+                            fontSize='14px'
+                        >
+                            View
+
+                        </CustomButton2>
                     </div>
                 </div>
             )
