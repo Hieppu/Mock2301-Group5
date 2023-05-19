@@ -14,7 +14,7 @@ const WithLoading = (WrapperComponent) => {
           <div className={styles.loadingContent}>
             <div className={styles.loadingMain}>
               <h4>Loading...</h4>
-              <img src="images/loading.gif" />
+              <img src="../../../image/loading.gif" alt=''/>
             </div>
           </div>
         )}

@@ -20,17 +20,17 @@ const userReducer = (state = initState, action) => {
     case actionTypes.USER_SIGNUP_REQUEST:
       return {
         ...state,
-        // isLoading: true,
+        isLoading: true,
       };
     case actionTypes.USER_SIGNUP_SUCCESS:
       return {
         ...state,
-        // isLoading: false,
+        isLoading: false,
       };
     case actionTypes.USER_SIGNUP_FAIL:
       return {
         ...state,
-        // isLoading: false,
+        isLoading: false,
         messageRegisterSuccess: 'Bạn đã đăng ký thành công xin hãy vào gmail active tài khoản',
       };
     case actionTypes.ACTIVE_USER_REQUEST:

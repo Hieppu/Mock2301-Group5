@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useForm, Controller } from 'react-hook-form';
@@ -36,6 +36,15 @@ const Signup2 = (props) => {
   const onSubmit = (values) => {
     props.signup(values);
   };
+
+  useEffect(
+    () => {
+      props.showLoading(props.isLoading);
+    },
+    [props],
+    [props.isLoading],
+  );
+
   return (
     <div className={styles.signUpContainer}>
       <Header />
