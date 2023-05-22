@@ -1,9 +1,0 @@
-
-*.jar
-backend/.mvn/wrapper/maven-wrapper.jar
-backend/.mvn/wrapper/maven-wrapper.properties
-backend/mvnw
-backend/mvnw.cmd
-backend/.mvn/wrapper/maven-wrapper.jar
-backend/.mvn/wrapper/maven-wrapper.jar
-backend/src/test/java/com/example/mobileworld/MobileworldApplicationTests.java
