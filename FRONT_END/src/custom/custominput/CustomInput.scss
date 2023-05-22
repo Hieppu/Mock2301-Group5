@@ -1,0 +1,110 @@
+.formcontrol-input {
+
+    position: relative;
+
+    .label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: rgba(0, 0, 0, .5);
+        transform: translate(14px, 14px);
+        text-align: center;
+        pointer-events: none;
+        transition: transform .3s ease-in-out;
+        background: transparent;
+
+        &.active {
+            transform: translate(8px, -8px) scale(.88);
+            color: rgb(25, 118, 210);
+        }
+
+        &.allowed {
+            transform: translate(8px, -8px) scale(.88);
+        }
+    }
+
+    .input-item {
+
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 3rem;
+            border: 1px solid rgba(0, 0, 0, .23);
+            padding: 0 14px;
+            background: none;
+            outline: none;
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgba(0, 0, 0, .87);
+            transition: all .3s ease;
+            border-radius: 4px;
+
+            &:focus {
+                outline: none;
+                border: none;
+            }
+
+            &.active,
+            &.allowed {
+                border-color: transparent;
+            }
+        }
+
+
+        fieldset {
+            text-align: left;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: -6px;
+            pointer-events: none;
+            width: 100%;
+            border-color: rgb(25, 118, 210);
+            border-radius: 4px;
+            display: none;
+            padding: 0 15px 0 8px;
+
+            &.active {
+                display: initial;
+            }
+
+            &.allowed {
+                display: initial;
+                border: 1px solid rgba(0, 0, 0, .23)
+            }
+
+            span {
+                font-size: .88rem;
+                padding: 0 5px 0 5px;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// .label.allowed {
+//     transform: translate(8px, -8px) scale(.88);
+// }
+
+
+
+// fieldset.allowed {
+//     display: initial;
+//     border: 1px solid rgba(0, 0, 0, .23)
+// }
+
+// fieldset span {
+//     font-size: .88rem;
+//     padding: 0 5px 0 5px;
+//     visibility: hidden;
+// }
